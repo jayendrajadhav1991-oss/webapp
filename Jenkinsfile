@@ -33,8 +33,8 @@ pipeline {
         }
         stage("Deployment") {
             steps {
-                // bat 'del /q /s "C:\\inetpub\\wwwroot\\WebApp\\"'
-                // bat '"xcopy /E /Y /I "publish\\*" "C:\\inetpub\\wwwroot\\WebApp\\"'
+                 bat 'del /q /s "C:\\inetpub\\wwwroot\\WebApp\\"'
+                bat '"xcopy /E /Y /I "publish\\*" "C:\\inetpub\\wwwroot\\WebApp\\"'
                 bat '''
                         if exist "C:\\inetpub\\wwwroot\\WebApp" rmdir /q /s "C:\\inetpub\\wwwroot\\WebApp"
                         mkdir "C:\\inetpub\\wwwroot\\WebApp"
